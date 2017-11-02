@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_data.*
 
 class DataActivity : AppCompatActivity() {
@@ -17,8 +18,12 @@ class DataActivity : AppCompatActivity() {
         var check: Boolean = data.getBoolean("logincheck")
 
             imageView2.setOnClickListener {
-                if (check == true){Log.d("hello","login")}
-                else{Log.d("hello","not login") }
+                if (check == true){Log.d("hello","login")
+                    Toast.makeText(this, "Login Session", Toast.LENGTH_SHORT).show()
+                }
+                else{Log.d("hello","not login")
+                    Toast.makeText(this, "Guest Session", Toast.LENGTH_SHORT).show()
+                }
             }
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
