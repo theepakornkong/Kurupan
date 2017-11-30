@@ -311,3 +311,19 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
         private val DUMMY_CREDENTIALS = arrayOf("foo@example.com:hello", "bar@example.com:world")
     }
 }
+
+class loginClass {
+
+    var username: String = ""
+    var password: String = ""
+
+    constructor() {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
+
+    constructor(username: String, password: String) {
+        this.username = username
+        this.password = password
+    }
+
+}
